@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MAPS</title>
+    <style>
+    *{ margin: 0; padding: 0; }
+    html, body, #map{
+        width: 100%;
+        height: 99%;
+    }
+	.button{
+		float:right;
+		color:red;
+	}
+    </style>
+	<script type="text/javascript" src="jq.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&amp;language=es"></script>
+    <script type="text/javascript" src="maps4.js"></script>
+	<link rel="stylesheet" href="pop.css">
+	</head>
+<body>
+    <div id="map"></div>
+	<button id="buttonA">BOUNCE</button>
+	<button id="buttonB">DROP</button>
+	<input type="text" id="dir" placeholder="Busqueda..."><button id="find">BUSCAR</button>
+	<button id="A">QUITAR MARKERS</button>
+	<button id="B">MOSTRAR MARKERS</button>
+	<button id="C">ELIMINAR MARKERS</button>
+	<input type="button" id="conte" value="¿QUE TIENE MI API DE MAPS?" class="button" data-type="zoomin" />
+	<div class="overlay-container">
+		<div class="window-container zoomin">
+			El mapa está modificado, el mar es verde oscuro, la tierra azul y las carreteras rojas<br>
+			- InfoWindow: contiene la frase "SPAIN IS DIFERENT!"<br>
+			- Polygone: contiene España<br>
+			- Polyline: camino de Londres a Manchester<br>
+			- Markers: en Villacañas y en Zagreb<br>
+			- Hay un campo de texto en el que hay que poner el lugar que quieras buscar, <br>
+			con el botón "BUSCAR" realiza la búsqueda y pone un marker en el lugar<br>
+			- Existe un array de markers, cuando se crea uno se añade automáticamente <br>
+			a este array<br>
+			- Boton "BOUNCE": hace que todos los markers del array boten<br>
+			- Botón "DROP": hace que todos los markers del array caigan<br> 
+			- Botón "QUITAR MARKERS": todos los markers se vuelven invisibles<br>
+			- Botón "MOSTRAR MARKERS": todos los markers se vuelven visibles<br>
+			- Botón "ELIMINAR MARKERS": elimina todos los markers<br>
+			
+			<span class="close" id="close">Cerrar</span>
+		</div>
+</body>
+</html>
